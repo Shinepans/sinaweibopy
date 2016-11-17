@@ -9,9 +9,9 @@ Python client SDK for sina weibo API using OAuth 2.
 '''
 
 try:
-    from cStringIO import StringIO
-except ImportError:
     from StringIO import StringIO
+except ImportError:
+    from io import StringIO
 
 import gzip, time, json, hmac, base64, hashlib, urllib, urllib2, logging, mimetypes, collections
 
